@@ -17,13 +17,14 @@ public class Main {
             for (String a: textoCompleto) {
                 String palavra[] = a.split(" ");
                 for(String b : palavra){
-                    if(!Token.buscaPalavra(b)){
+                    if(!Token.buscaPalavra(textoCompleto,b)){
                         System.out.println("Erro na linha: "+ (++index) + " - Palavra: "+b);
                         return;
                     }
                 }
+                index++;
             }
-            System.out.println("Sucesso");
+            System.out.println("Este código pertence ao alfabeto");
         } catch (IOException e) {
             e.printStackTrace();
         }
